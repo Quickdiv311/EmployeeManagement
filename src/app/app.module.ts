@@ -3,14 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CardsComponent } from './components/cards/cards.component';
+import { CardComponent } from './components/cards/card/card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReactiveFormComponent,
+    CardsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

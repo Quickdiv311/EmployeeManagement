@@ -1,0 +1,29 @@
+
+<div class="main-form">
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <div class="form-group row">
+           <div class="col-md-6">
+            <label for="name">Name</label>
+            <input type="text" id="name" formControlName="name" class="form-control mt-1">
+           </div>
+        </div>
+          
+        <div class="form-array mt-3" formArrayName="skills">
+           
+            <h6 style="font-weight: 400;">Skills</h6>
+
+            <div class="row mt-2" *ngFor="let skill of controls; let i = index">
+                 <div class="col-md-6">
+                    <input type="text" class="form-control" [formControlName]="i">
+                 </div>
+                 <div class="col-md-2">
+                    <button class="btn btn-danger" (click)="removeSkill(i)">x</button>
+                 </div>
+            </div>
+
+            <button class="btn btn-primary mt-3" type="button" (click)="addSkill()">Add Skill</button>
+        </div>
+
+        <button class="btn btn-success mt-3" type="submit">Submit</button>
+    </form>
+</div>

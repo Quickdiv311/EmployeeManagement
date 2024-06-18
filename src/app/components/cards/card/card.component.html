@@ -1,0 +1,8 @@
+<div class="card" (click)="display()">
+    <div class="card-body">
+      <h5 class="card-title">{{employee.name}}</h5>
+
+      <h6>skills:</h6>
+      <p class="card-text" *ngFor="let skill of employee.skills">{{skill}}</p>
+      </div>
+  </div>
